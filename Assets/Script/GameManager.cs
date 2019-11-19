@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
 {
     void Start()
     {
-        CurrentLevelTriggerCount = 2;
+        CurrentLevelTriggerCount = _currentLevelTriggerCount;
     }
     public bool[] trigger = new bool[0];
 
