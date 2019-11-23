@@ -2407,7 +2407,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-65122
+  m_Name: pb_Mesh13584
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3488,7 +3488,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-63206
+  m_Name: pb_Mesh13612
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5938,8 +5938,8 @@ GameObject:
   - component: {fileID: 2037031837}
   - component: {fileID: 2037031836}
   - component: {fileID: 2037031835}
-  - component: {fileID: 2037031839}
   - component: {fileID: 2037031838}
+  - component: {fileID: 2037031839}
   m_Layer: 0
   m_Name: Balok (1)
   m_TagString: Untagged
@@ -6434,7 +6434,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1965992827471674745
 BoxCollider:
