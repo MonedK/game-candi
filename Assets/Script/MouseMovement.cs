@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class MouseMovement : MonoBehaviour
 {
-   /* private Vector3 mOffset;
+   private Vector3 mOffset;
 
 
 
     private float mZCoord;
     public Rigidbody rb;
-    */
+    
     void OnMouseDrag()
     {
         float distance_to_screen = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
