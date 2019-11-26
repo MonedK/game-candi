@@ -28,7 +28,7 @@ public class pickableObject : MonoBehaviour
         if (grabObject == null || !canGrab(grabObject))
             return;
         grabbedObject = grabObject;
-        grabbedObjectSize = grabObject.GetComponent<Renderer>().bounds.size.magnitude; 
+        grabbedObjectSize = grabObject.GetComponent<Renderer>().bounds.size.magnitude;
     }
 
     void DropObject()
@@ -49,12 +49,12 @@ public class pickableObject : MonoBehaviour
                 TryGrabObject(GetMouseHoveObject(5));
             else
                 DropObject();
-        }                   
-        if(grabbedObject != null)
-            {
-                Vector3 newPosition = gameObject.transform.position + Camera.main.transform.forward * grabbedObjectSize;
-                grabbedObject.transform.position = newPosition;
-            }
-                
+        }
+        if (grabbedObject != null)
+        {
+            Vector3 newPosition = gameObject.transform.position + Camera.main.transform.forward * grabbedObjectSize;
+            grabbedObject.transform.position = newPosition;
+        }
+
     }
 }
