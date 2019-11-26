@@ -2,41 +2,63 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//[RequireComponent(typeof(BoxCollider))]
+
 
 public class MouseDrag : MonoBehaviour
 {
-  public Rigidbody rb;
+    [SerializeField] private string selectableTag = "Selectable";
+    [SerializeField] private Material highlightMaterial;
+    [SerializeField] private Material defaultMaterial;
+
+    private Transform _selection;
+
+    public float speed = 10.0f;
+    public Rigidbody rb;
+    public Vector2 movement;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = this.GetComponent<Rigidbody>();
     }
-
-    private void OnMouseDrag()
+    //void FixedUpdate()
+    //{
+    //  moveCharacter(movement);
+    //}
+    void Update()
     {
-        float distance_to_screen = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-        Vector3 pos_move = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen));
-        rb.MovePosition(pos_move.x + pos_move.y + transform.position.z);
-    }
-    /*void FixedUpdate()
-    {
-        // Moves the GameObject to the left of the origin.
-        if (transform.position.x > 3.0f)
+        if (_selection != null)
         {
-            transform.position = new Vector3(-3.0f, 0.0f, 0.0f);
+            var selectionRenderer = _selection.GetComponent<Renderer>();
+            selectionRenderer.material = defaultMaterial;
+            _selection = null;
         }
+    
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            var selection = hit.transform;
+            if (selection.CompareTag(selectableTag))
+            {
+                var selectionRenderer = selection.GetComponent<Renderer>();
+                if (selectionRenderer != null)
+                {
+                    selectionRenderer.material = highlightMaterial;
+                }
+                _selection = selection;
+            }
+            moveCharacter(movement);
 
-        rb.MovePosition(transform.position + transform.right * Time.fixedDeltaTime);
+            void moveCharacter(Vector2 direction)
+            {
+                rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
+            }
+            movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
+        }
+    
+        
     }
-    */
-
-    /*void OnMouseDrag()
-    {
-        float distance_to_screen = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-        Vector3 pos_move = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen));
-        transform.position = new Vector3(pos_move.x, pos_move.y, transform.position.z);
-
-    }
-    */
+    
+    
 }
