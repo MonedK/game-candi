@@ -53,7 +53,7 @@ public class MouseDrag : MonoBehaviour
             {
                 rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
             }
-            movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            movement = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
         }
     

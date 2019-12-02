@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
                 return;
             }            
         }
+        Cursor.lockState = CursorLockMode.None;
         completeLevelUI.SetActive(true);
     }
 
