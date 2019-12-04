@@ -7,10 +7,10 @@ public class Magnetchangepos : MonoBehaviour
     // Transforms to act as start and end markers for the journey.
     public Transform startMarker;
     public Transform endMarker;
-    public bool teting;
+    public bool testing;
 
     // Movement speed in units per second.
-    public float speed = 1.0F;
+    public float speed = 10F;
 
     // Time when the movement started.
     private float startTime;
@@ -18,7 +18,7 @@ public class Magnetchangepos : MonoBehaviour
     // Total distance between the markers.
     private float journeyLength;
 
-    void Start()
+    public void Start()
     {
         // Keep a note of the time the movement started.
         startTime = Time.time;
@@ -27,18 +27,18 @@ public class Magnetchangepos : MonoBehaviour
         journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Magnet");
         {
-            teting = true;
+            testing = true;
         }
          
     }
     // Move to the target end position.
     void Update()
     {
-        if(teting)
+        if(testing == true)
         {
             // Distance moved equals elapsed time times speed..
             float distCovered = (Time.deltaTime - startTime) * speed;

@@ -11,7 +11,7 @@ public class Level : MonoBehaviour
     }
         public void PlayLevel1()
     {
-        SceneManager.LoadScene("Level01");
+        SceneManager.LoadScene(02);
     }
 
     public void PlayLevel2()
@@ -20,7 +20,7 @@ public class Level : MonoBehaviour
     }
     public void PlayLevel3()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Level03");
     }
     public void PlayLevel4()
     {

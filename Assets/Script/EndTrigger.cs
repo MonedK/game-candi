@@ -8,6 +8,10 @@ public class EndTrigger : MonoBehaviour
 
     public void OnTriggerEnter(Collider collider)
     {
-        gameManager.SetTriggered(ID); 
+        if(collider.tag == "Magnet")
+        {
+            gameManager.SetTriggered(ID);
+        }
+         
     }
 }
