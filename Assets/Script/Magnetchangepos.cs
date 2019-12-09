@@ -20,6 +20,7 @@ public class Magnetchangepos : MonoBehaviour
 
     public void Start()
     {
+        Debug.Log("test");
         // Keep a note of the time the movement started.
         startTime = Time.time;
 
@@ -40,8 +41,9 @@ public class Magnetchangepos : MonoBehaviour
     {
         if(testing == true)
         {
+            
             // Distance moved equals elapsed time times speed..
-            float distCovered = (Time.deltaTime - startTime) * speed;
+            float distCovered = (Time.deltaTime) * speed;
 
             // Fraction of journey completed equals current distance divided by total distance.
             float fractionOfJourney = distCovered / journeyLength;
