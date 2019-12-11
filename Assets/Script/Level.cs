@@ -9,6 +9,12 @@ public class Level : MonoBehaviour
     {
         SceneManager.LoadScene("Level");
     }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
         public void PlayLevel1()
     {
         SceneManager.LoadScene("Level01");
