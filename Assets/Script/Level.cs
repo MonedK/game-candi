@@ -30,7 +30,23 @@ public class Level : MonoBehaviour
     }
     public void PlayLevel4()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Level04");
+    }
+    public void PlayLevel5()
+    {
+        SceneManager.LoadScene("Level05");
+    }
+    public void PlayLevel6()
+    {
+        SceneManager.LoadScene("Level06");
+    }
+    public void PlayLevel7()
+    {
+        SceneManager.LoadScene("Level07");
+    }
+    public void PlayLevel8()
+    {
+        SceneManager.LoadScene("Level08");
     }
 
     public void BackMenu()

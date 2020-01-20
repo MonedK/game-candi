@@ -20,7 +20,7 @@ public class Magnetchangepos : MonoBehaviour
 
     public void Start()
     {
-        Debug.Log("test");
+
         // Keep a note of the time the movement started.
         startTime = Time.time;
 

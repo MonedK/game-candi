@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public float restartDelay = 0f;
 
     public GameObject completeLevelUI;
+    public GameObject helpButton;
 
     public void SetTriggered(int ID)
     {
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
         }
         Cursor.lockState = CursorLockMode.None;
         completeLevelUI.SetActive(true);
+        helpButton.SetActive(false);
     }
 
     public void Endgame()

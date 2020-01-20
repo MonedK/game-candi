@@ -35,4 +35,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level08.unity
     guid: 1c8f09f352352544186c1520ee723b92
+  - enabled: 1
+    path: Assets/koleksi.unity
+    guid: c82cd466fa919a443b3db1f7952186e3
+  - enabled: 1
+    path: Assets/Objek1.unity
+    guid: d0fee8a35b6a9184db43753050587644
+  - enabled: 1
+    path: Assets/Objek2.unity
+    guid: 927ce4c1d3403ca4badaec4d7645061c
+  - enabled: 1
+    path: Assets/Objek3.unity
+    guid: be8aa1d833e0e69439ee2e275b1d11ac
+  - enabled: 1
+    path: Assets/Objek4.unity
+    guid: 6e31157523f1ee24da29f3a84f4425c4
+  - enabled: 1
+    path: Assets/Objek5.unity
+    guid: dec3ef833380a7f479897c2370843682
+  - enabled: 1
+    path: Assets/Objek6.unity
+    guid: 3a4d2e679d3c6d341b3090bfdcb08122
+  - enabled: 1
+    path: Assets/Objek7.unity
+    guid: 346269cc1952a594b927c07ca848fb55
+  - enabled: 1
+    path: Assets/Objek8.unity
+    guid: 778e6d9ae79af944496db37d9cd0d4d8
   m_configObjects: {}
