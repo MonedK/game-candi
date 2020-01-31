@@ -12,6 +12,12 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void ExitGame()
+    {
+        Debug.Log("quit application");
+        Application.Quit();
+    }
+
     public void PlayKoleksi()
     {
         SceneManager.LoadScene("koleksi");
