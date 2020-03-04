@@ -545,7 +545,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 62.201046, y: 5.3498535}
+  m_AnchoredPosition: {x: 102.101685, y: 14.700554}
   m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &174387627
@@ -1873,7 +1873,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 824084998}
+      objectReference: {fileID: 0}
     - target: {fileID: 2568942396686864341, guid: 5fda5157f2c4d2647b62c2975b54324f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1892,18 +1892,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 824084996}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &824084998 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1592290863667139771, guid: 5fda5157f2c4d2647b62c2975b54324f,
-    type: 3}
-  m_PrefabInstance: {fileID: 824084996}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6292106e4afc9d449aadaff6d34dd170, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &846975767
 GameObject:
   m_ObjectHideFlags: 0
@@ -6273,7 +6261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 91.997894, y: -113.99948}
+  m_AnchoredPosition: {x: 102.101685, y: -123.197754}
   m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6045187384713131611
@@ -6667,7 +6655,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.0021, y: -113.99948}
+  m_AnchoredPosition: {x: -6.8983183, y: -123.197784}
   m_SizeDelta: {x: 123.6, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6045187385049522874
