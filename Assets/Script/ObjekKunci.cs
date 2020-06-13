@@ -11,13 +11,18 @@ public class ObjekKunci : MonoBehaviour
     private float deltaX, deltaY, deltaZ;
     public static bool locked;
     private static ObjekKunci instance;
+    AudioSource tick;
+    AudioSource error;
+    public AudioClip impact;
+    public AudioClip wrong;
 
     // Start is called before the first frame update
     void Awake()
     {
         
         initialPosition = transform.position;
-        
+        tick = GetComponent<AudioSource>();
+        error = GetComponent<AudioSource>();
     }
 
 
@@ -32,12 +37,14 @@ public class ObjekKunci : MonoBehaviour
             {
                 transform.position = new Vector3(objekPlace.position.x, objekPlace.position.y, objekPlace.position.z);
                 locked = true;
-                
+                //AudioSource audio = gameObject.AddComponent<AudioSource>();
+                tick.PlayOneShot(impact, 1f);
             }
             else
             {
                 transform.position = new Vector3(initialPosition.x, initialPosition.y, initialPosition.z);
-               
+                //AudioSource audio1 = gameObject.AddComponent<AudioSource>();
+                error.PlayOneShot(wrong, 1f);
             }
             
             

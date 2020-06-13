@@ -9,6 +9,7 @@ public class ObjekKunci1 : MonoBehaviour
     private Vector3 initialPosition;
     private float deltaX, deltaY, deltaZ;
     public static bool locked;
+    public AudioSource src;
 
 
     // Start is called before the first frame update
@@ -27,11 +28,13 @@ public class ObjekKunci1 : MonoBehaviour
                 Mathf.Abs(transform.position.z - objekPlace.position.z) <= 0.5f)
             {
                 transform.position = new Vector3(objekPlace.position.x, objekPlace.position.y, objekPlace.position.z);
+                src.Play();
                 locked = true;
             }
             else
             {
                 transform.position = new Vector3(initialPosition.x, initialPosition.y, initialPosition.z);
+                src.Play();
             }
 
 

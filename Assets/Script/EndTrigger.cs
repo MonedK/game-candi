@@ -14,4 +14,12 @@ public class EndTrigger : MonoBehaviour
         }
          
     }
+
+    public void OnTriggerExit(Collider collider)
+    {
+        if(collider.tag == "Magnet")
+        {
+            Debug.Log("keluar");
+        }
+    }
 }

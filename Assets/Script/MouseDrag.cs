@@ -6,59 +6,28 @@ using UnityEngine;
 
 public class MouseDrag : MonoBehaviour
 {
-    [SerializeField] private string selectableTag = "Selectable";
-    [SerializeField] private Material highlightMaterial;
-    [SerializeField] private Material defaultMaterial;
 
-    private Transform _selection;
+        Rigidbody rb;
 
-    public float speed = 10.0f;
-    public Rigidbody rb;
-    public Vector2 movement;
-
-    void Start()
-    {
-        rb = this.GetComponent<Rigidbody>();
-    }
-    //void FixedUpdate()
-    //{
-    //  moveCharacter(movement);
-    //}
-    void Update()
-    {
-        if (_selection != null)
+        void Start()
         {
-            var selectionRenderer = _selection.GetComponent<Renderer>();
-            selectionRenderer.material = defaultMaterial;
-            _selection = null;
+            // Store reference to attached Rigidbody
+            rb = GetComponent<Rigidbody>();
         }
-    
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+
+        void OnMouseDrag()
         {
-            var selection = hit.transform;
-            if (selection.CompareTag(selectableTag))
-            {
-                var selectionRenderer = selection.GetComponent<Renderer>();
-                if (selectionRenderer != null)
-                {
-                    selectionRenderer.material = highlightMaterial;
-                }
-                _selection = selection;
-            }
-            moveCharacter(movement);
+            float distance_to_screen = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
 
-            void moveCharacter(Vector2 direction)
-            {
-                rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
-            }
-            movement = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-
+            // Move by Rigidbody rather than transform directly
+            rb.MovePosition(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen)));
         }
-    
-        
-    }
-    
-    
+
+        //void OnCollisionEnter(Collision col)
+        //{
+            // Freeze on collision
+          //  rb.isKinematic = true;
+        //}
+
+
 }
